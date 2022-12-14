@@ -4,6 +4,10 @@ export const FooterWrapper = styled.div`
     width: 100%;
     background: #040404;
     color: #fff;
+    @media (max-width: 569px) {
+        width: 100%;
+        /* padding: 0px 24px; */
+    }
 `
 export const FooterContainer = styled.div`
     padding: 24px 24px;
@@ -12,13 +16,13 @@ export const FooterContainer = styled.div`
         max-width: 1400px;
     }
 
-  @media (max-width: 1000px) {
+  /* @media (max-width: 1000px) {
     margin: auto 56px;
   }
 
   @media (max-width: 567px) {
     margin: auto 20px;
-  }
+  } */
 `
 export const FooterContent = styled.div`
      display: flex;
@@ -46,7 +50,9 @@ export const FooterLink = styled.div`
     flex-wrap: wrap;
     @media (max-width: 567px) {
     gap: 32px;
-    
+  }
+    @media (max-width: 320px) {
+    flex-direction: column;
   }
   @media (max-width: 769px) {
     padding-bottom: 40px;
@@ -91,6 +97,10 @@ export const CopyRight = styled.div`
     @media (max-width: 769px) {
         padding-bottom: 20px;
     }
+    @media (max-width: 569px) {
+        /* width: 100%; */
+        text-align: center;
+    }
 `
 export const SocialIcon = styled.div`
     display: flex;
@@ -108,8 +118,10 @@ export const FooterForm = styled.form`
         bottom: 120px;
         left: 70px;
     }
+  @media (max-width: 320px) {
+        left: 40px;
+    }
   #q {
-    /* position: relative; */
     width: 150px;
   padding: 8px;
   border-radius: 50px;

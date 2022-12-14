@@ -27,7 +27,7 @@ export const NavMenu = styled.div`
     display: flex;
     padding: 0 15px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     list-style: none;
     cursor: pointer;
     &:hover {
@@ -68,6 +68,7 @@ export const ContactLink = styled(LinkS)`
   border-radius: 10px;
   padding: 15px 35px;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   &:hover {
     background: #137547;

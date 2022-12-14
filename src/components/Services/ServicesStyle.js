@@ -1,25 +1,16 @@
 import styled, {css} from "styled-components";
 
-export const HeroWrapper = styled.div`
-  /* width: 100%; */
-  /* position: absolute; */
+export const ServiceWrapper = styled.div`
   overflow: hidden;
   background: #ffffff;
-  /* bottom: -245px; */
   padding: 0px 24px;
+  @media (max-width: 569px) {
+        padding: 0px 24px;
+    }
 `;
 
 export const ServicesContainer = styled.div`
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   padding: 56px 0px;
-  /* width: 100%; */
-  /* margin: auto; */
-  @media (max-width: 769px) {
-       width: 100%;
-    }
 `
 
 export const ServiceText = styled.p`
@@ -32,19 +23,22 @@ export const ServiceText = styled.p`
        width: 100%;
        font-size: 24px;
     }
+  
 
   ${props => props.text && css`
         font-size: 14px; 
+        @media (max-width: 320px) {
+           /* width: 100%; */
+           font-size: 14px;
+        }
     `}
 `
 export const GridRow = styled.div`
-  /* width: 100%; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* gap: 20px; */
+  
   > div {
-    /* width: 40%; */
     padding: 20px;
     box-sizing: border-box !important;
   }
@@ -55,6 +49,14 @@ export const ServiceCard = styled.div`
   background: #F5F5F5;
   border-radius: 20px; 
   padding: 32px;
+  @media (max-width: 569px) {
+        /* width: 100%; */
+        padding: 0px 24px;
+    }
+    @media (max-width: 320px) {
+        width: 100%;
+        padding: 0px;
+    }
   > h2 {
     font-size: 32px;
     font-weight: 800;
@@ -66,6 +68,8 @@ export const ServiceCard = styled.div`
   &:hover {
         transition: all 0.2s ease-in-out;
         background: #fff;
-        box-shadow: 0px 10px 40px 6px rgba(87, 87, 87, 0.12);
+        box-shadow: 1px 2px 8px 5px rgba(7,115,31,0.8);
+        -webkit-box-shadow: 1px 2px 8px 5px rgba(7,115,31,0.8);
+        -moz-box-shadow: 1px 2px 8px 5px rgba(7,115,31,0.8);
   }
 `

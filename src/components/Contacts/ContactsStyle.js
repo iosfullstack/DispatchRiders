@@ -20,6 +20,10 @@ export const SectionWrapper = styled.div`
 export const ContactWrapper = styled.div`
     padding: 24px 24px;
     overflow: hidden;
+    @media (max-width: 569px) {
+        /* width: 100%; */
+        padding: 0px 24px;
+    }
 `
 export const ContactContents = styled.div`
     display: flex;
@@ -32,7 +36,7 @@ export const ContactForm = styled.div`
     display: block;
     width: 500px;
     @media (max-width: 769px) {
-        width: 100%;
+        /* width: 100%; */
     }
     > h3 {
         color: #FAFAFA;

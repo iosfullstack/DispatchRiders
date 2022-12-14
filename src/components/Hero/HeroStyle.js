@@ -11,6 +11,12 @@ export const TypeWriter = styled.div`
     display: flex;
     gap: 15px;
     overflow: hidden;
+    @media (max-width: 569px) {
+        width: 100%;
+    }
+    @media (max-width: 320px) {
+        width: 100%;
+    }
 `
 export const TypeWriterText = styled.span`
     font-size: 28px;
@@ -24,6 +30,12 @@ export const TypeWriterText = styled.span`
     @media (max-width: 769px) {
        font-size: 22px;
     }
+    @media (max-width: 569px) {
+        font-size: 18px;
+    }
+    @media (max-width: 320px) {
+        font-size: 16px;
+    }
 `
 
 export const HeroTextContainer = styled.div`
@@ -34,9 +46,7 @@ export const HeroTextContainer = styled.div`
 `
 export const HeroText = styled.h3`
     color: #5BBA6F;
-    /* font-weight: 800; */
     font-size: 36px;
-    /* font-family: 'SF Pro Rounded', sans-serif; */
     font-family: 'Source Sans Pro', sans-serif;
     @media (max-width: 769px) {
        font-size: 32px;

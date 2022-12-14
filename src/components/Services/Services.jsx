@@ -1,5 +1,5 @@
 import React from "react";
-import { GridRow, HeroWrapper, ServiceCard, ServicesContainer, ServiceText } from "./ServicesStyle"
+import { GridRow, ServiceCard, ServicesContainer, ServiceText, ServiceWrapper } from "./ServicesStyle"
 
 import img1 from "../../assets/images/sevicesimg/img1.png";
 import img2 from "../../assets/images/sevicesimg/img2.png";
@@ -27,7 +27,7 @@ const serviceData = [
 
 const Services = () => {
   return (
-    <HeroWrapper id="services">
+    <ServiceWrapper id="services">
         <ServicesContainer>
            <Slide direction="up">
            <ServiceText>
@@ -49,7 +49,7 @@ const Services = () => {
             </GridRow>
             <ServiceText text>And lots more.....</ServiceText>
         </ServicesContainer>
-    </HeroWrapper>
+    </ServiceWrapper>
   )
 }
 
