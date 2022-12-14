@@ -83,7 +83,7 @@ const Footer = () => {
                 />
                 <img src={Hand} alt='emoji' />
                 <span>
-                    <a href="https://wa.me/08065593093" target="_blank" rel="noopener noreferrer"><MdMessage size="25"/></a>
+                    <a href="https://wa.me/08133649624" target="_blank" rel="noopener noreferrer"><MdMessage size="25"/></a>
                 </span>
             </FooterForm>
 
