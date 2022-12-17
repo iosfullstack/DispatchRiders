@@ -105,7 +105,7 @@ export const FooterForm = styled.form`
         bottom: 140px;
         left: 45px;
     }
-    @media (max-width: 360px) {
+    @media (max-width: 380px) {
         bottom: 160px;
     }
   #q {
