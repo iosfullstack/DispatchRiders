@@ -28,7 +28,7 @@ const serviceData = [
 const Service = () => {
     
   return (
-    <ServiceWrapper>
+    <ServiceWrapper id="services">
         <ServiceContainer>
             <Slide direction='up'>
                 <TypographyH>
