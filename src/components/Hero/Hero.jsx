@@ -55,7 +55,7 @@ const Hero = () => {
         </HeroTextContainer>
         <HeroImages>
             <img src={Img1} alt='car' />
-            <img src={Img2} alt='car' />
+            <img src={Img2} alt='motorcycle' />
         </HeroImages>
     </HeroWrapper>
   )

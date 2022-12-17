@@ -13,7 +13,7 @@ const Navbar = () => {
         <Nav>
           <div>
                 <Logo> 
-                <img src={logo} width="200" alt="Nerdy Eye Logo" />
+                <img src={logo} alt="Dispatch Logo" />
                 </Logo>
 
                 <NavMenu>

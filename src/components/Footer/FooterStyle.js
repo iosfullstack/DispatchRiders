@@ -2,68 +2,54 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.div`
     width: 100%;
+    position: relative;
+    overflow: hidden;
     background: #040404;
     color: #fff;
-    @media (max-width: 569px) {
-        width: 100%;
-        /* padding: 0px 24px; */
-    }
 `
 export const FooterContainer = styled.div`
-    padding: 24px 24px;
-    margin: auto;
+    padding: 0px 24px;
     > hr {
-        max-width: 1400px;
+        max-width: 1440px;
+        color: #BDBDBD;
     }
-
-  /* @media (max-width: 1000px) {
-    margin: auto 56px;
-  }
-
-  @media (max-width: 567px) {
-    margin: auto 20px;
-  } */
 `
 export const FooterContent = styled.div`
-     display: flex;
-  position: relative;
-  justify-content: space-between;
-  padding: 0 24px;
-  > div {
-    width: 320px;
-    > p {
-    font-size: 16px;
-  }
-  }
-
-  @media (max-width: 920px) {
-    padding: 0px;
-  }
-  
-  @media (max-width: 567px) {
-    flex-direction: column;
-  }
-`
-export const FooterLink = styled.div`
     display: flex;
     justify-content: space-between;
+    margin: 34px 0px;
     flex-wrap: wrap;
-    @media (max-width: 567px) {
-    gap: 32px;
-  }
-    @media (max-width: 320px) {
-    flex-direction: column;
-  }
-  @media (max-width: 769px) {
-    padding-bottom: 40px;
+    padding: 24px;
+`
+export const FooterRight = styled.div`
+    width: 328px;
+    > img {
+        width: 200px;
+    }
+    > p {
+        font-size: 16px;
+        color: #BDBDBD;
+    }
+    @media (max-width: 580px) {
+        > img {
+            width: 150px;
+        }
     }
 `
-
+export const FooterLeft = styled.div`
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    flex-wrap: wrap;
+    @media (max-width: 580px) {
+        gap: 20px;
+    }
+`
 export const FooterMenu = styled.div`
-    > h5 {
+       > h5 {
     margin: 0px;
     font-size: 18px;
-    /* font-weight: 800; */
   }
   > ul {
     list-style-type: none;
@@ -78,52 +64,54 @@ export const FooterMenu = styled.div`
 
   > ul > li > a {
     text-decoration: none;
-    color: #fff;
+    color: #BDBDBD;
     &:hover {
       color: #137547;
     }
   }
 `
-export const SocialIconWrapper = styled.div`
+export const FooterBelow = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 20px 24px;
-    @media (max-width: 769px) {
-    flex-direction: column;
-    align-items: center;
-  }
-`
-export const CopyRight = styled.div`
-    @media (max-width: 769px) {
-        padding-bottom: 20px;
+    padding: 24px 0px;
+    /* flex-wrap: wrap; */
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
     }
-    @media (max-width: 569px) {
-        /* width: 100%; */
+`
+export const CopyRight = styled.p`
+    font-size: 16px;
+    font-weight: 500;
+    color: #BDBDBD;
+    @media (max-width: 580px) {
         text-align: center;
     }
 `
-export const SocialIcon = styled.div`
+export const SocialIconWrapper = styled.div`
     display: flex;
-    width: 109px;
-    justify-content: space-between;
-    > a {
-        color: #BDBDBD;
+    gap: 100px;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
     }
 `
 export const FooterForm = styled.form`
   width: 220px;
   position: relative;
-  left: 230px;
-  @media (max-width: 920px) {
-        bottom: 120px;
-        left: 70px;
+  @media (max-width: 580px) {
+        bottom: 140px;
+        left: 45px;
     }
-  @media (max-width: 320px) {
-        left: 40px;
+    @media (max-width: 340px) {
+        bottom: 160px;
     }
   #q {
+    /* position: relative; */
     width: 150px;
-  padding: 8px;
+  padding: 10px;
   border-radius: 50px;
   border: 0px;
   outline: none;
@@ -131,13 +119,13 @@ export const FooterForm = styled.form`
   img {
     position: absolute;
     right: 60px;
-    top: 2px;
+    top: 4px;
   }
   span {
     position: absolute;
-    bottom: -3px;
-    width: 40px;
-    height: 40px;
+    top: -5px;
+    width: 50px;
+    height: 50px;
     text-align: center;
     border-radius: 50%;
     background-color: #137547;
@@ -147,15 +135,14 @@ export const FooterForm = styled.form`
     position: absolute;
     text-decoration: none;
     color: #fff;
-    top: 10px;
+    top: 8px;
     right: 7px;
   }
 `
-export const FooterInput = styled.input`
-  width: 120px;
-  /* height: 45px; */
-  padding: 8px;
-  border-radius: 50px;
-  border: 0px;
-  outline: none;
+export const SocialIcon = styled.div`
+    display: flex;
+    gap: 20px;
+    > a {
+        color: #BDBDBD;
+    }
 `

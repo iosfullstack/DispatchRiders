@@ -1,9 +1,9 @@
 import React from 'react'
-import Contacts from '../Contacts/Contacts'
+import Contact from '../Contact/Contact'
 import Footer from '../Footer/Footer'
 import Hero from '../Hero/Hero'
 import Navbar from '../organisms/navbar/Navbar'
-import Services from '../Services/Services'
+import Service from '../Services/Service'
 import { MainWrapper } from './MainStyle'
 
 
@@ -14,9 +14,9 @@ const Main = () => {
       <Navbar/>
       <Hero/>
     </MainWrapper>
-      <Services/>
-      <Contacts/>
-      <Footer/>
+    <Service/>
+    <Contact/>
+    <Footer/>
     </div>
   )
 }

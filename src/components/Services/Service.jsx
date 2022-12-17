@@ -1,10 +1,11 @@
-import React from "react";
-import { GridRow, ServiceCard, ServicesContainer, ServiceText, ServiceWrapper } from "./ServicesStyle"
+import React from 'react'
+import { Slide } from 'react-awesome-reveal'
+import { ServiceCard, ServiceContainer, ServiceRow, ServiceWrapper, TypographyH, TypographyP } from './ServiceStyle'
 
 import img1 from "../../assets/images/sevicesimg/img1.png";
 import img2 from "../../assets/images/sevicesimg/img2.png";
 import img3 from "../../assets/images/sevicesimg/img3.png";
-import { Slide } from "react-awesome-reveal";
+
 
 const serviceData = [
     {
@@ -24,19 +25,18 @@ const serviceData = [
     },
 ];
 
-
-const Services = () => {
+const Service = () => {
+    
   return (
-    <ServiceWrapper id="services">
-        <ServicesContainer>
-           <Slide direction="up">
-           <ServiceText>
-                We guarantee safe and fast delivery 
-                for your packages
-            </ServiceText>
-           </Slide>
-
-            <GridRow>
+    <ServiceWrapper>
+        <ServiceContainer>
+            <Slide direction='up'>
+                <TypographyH>
+                    We guarantee safe and fast delivery 
+                    for your packages
+                </TypographyH>
+            </Slide>
+            <ServiceRow>
             {serviceData.map((services, key) => (
               <div key={key}>
                 <ServiceCard>
@@ -46,11 +46,13 @@ const Services = () => {
                 </ServiceCard>
               </div>
             ))}
-            </GridRow>
-            <ServiceText text>And lots more.....</ServiceText>
-        </ServicesContainer>
+            </ServiceRow>
+            <TypographyP>
+                And lots more.....
+            </TypographyP>
+        </ServiceContainer>
     </ServiceWrapper>
   )
 }
 
-export default Services
+export default Service

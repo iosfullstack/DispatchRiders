@@ -16,6 +16,7 @@ export const TypeWriter = styled.div`
     }
     @media (max-width: 320px) {
         width: 100%;
+        overflow: hidden;
     }
 `
 export const TypeWriterText = styled.span`
@@ -43,6 +44,12 @@ export const HeroTextContainer = styled.div`
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+    @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    overflow-x: hidden;
+}
 `
 export const HeroText = styled.h3`
     color: #5BBA6F;
@@ -88,14 +95,20 @@ export const HeroImages = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media (max-width: 769px) {
-       flex-direction: column-reverse;
+    @media (max-width: 720px) {
+        width: 100%;
+        flex-direction: column-reverse;
     }
-    > img {
-        width: 580px;
-        @media (max-width: 769px) {
-       width: 100%;
+    img {
+        width: 600px;
+        @media (max-width: 580px) {
+            width: 100%;
+        } 
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+        @media (min-width: 1024px) {
+            width: 50%;
+        }
     }
-    }
-    
 `

@@ -53,6 +53,17 @@ export const NavMenu = styled.div`
 
 export const Logo = styled(LinkR)`
     text-decoration: none;
+    img {
+      width: 200px;
+      /* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    width: 100px;
+}
+
+    }
 `
 export const MobileMenuBtn = styled.div`
   display: none;

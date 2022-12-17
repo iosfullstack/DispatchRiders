@@ -1,11 +1,10 @@
-import React from "react";
-import { CopyRight, FooterContainer, FooterContent, FooterForm, FooterLink, FooterMenu, FooterWrapper, SocialIcon, SocialIconWrapper } from './FooterStyle'
+import React from 'react'
+import { CopyRight, FooterBelow, FooterContainer, FooterContent, FooterForm, FooterLeft, FooterMenu, FooterRight, FooterWrapper, SocialIcon, SocialIconWrapper } from './FooterStyle'
 import logo from "../../assets/images/footer/img1.png"
 import { Link } from 'react-scroll'
 import { FaLinkedin, FaInstagram } from 'react-icons/fa'
 import { MdMessage } from 'react-icons/md'
 import { BsTwitter } from 'react-icons/bs'
-
 import Hand from "../../assets/images/footer/img2.png"
 
 const Footer = () => {
@@ -13,20 +12,18 @@ const Footer = () => {
     <FooterWrapper>
         <FooterContainer>
             <FooterContent>
-            <div>
-                <img src={logo} alt='dispatch logo' 
-                    width= "200px"
-                />
-                <p>
-                    No: 8, Ugwuonyia Monaque, Enugu State, Nigeria.
-                </p>
-                <p>
-                    No: 31, Eze Street, Uwani LGA, Enugu State, Nigeria.
-                </p>
-            </div>
+                <FooterRight>
+                    <img src={logo} alt='dispatch logo' />
+                    <p>
+                        No: 8, Ugwuonyia Monaque, Enugu State, Nigeria.
+                    </p>
+                    <p>
+                        No: 31, Eze Street, Uwani LGA, Enugu State, Nigeria.
+                    </p>
+                </FooterRight>
 
-            <FooterLink>
-                <FooterMenu>
+                <FooterLeft>
+                    <FooterMenu>
                     <h5>About</h5>
                     <ul>
                         <li>
@@ -39,8 +36,8 @@ const Footer = () => {
                             <Link to="contacts" smooth={true} spy={true}>Contact Us</Link>
                         </li>
                     </ul>
-                </FooterMenu>
-                <FooterMenu>
+                    </FooterMenu>
+                    <FooterMenu>
                     <h5>Support</h5>
                     <ul>
                         <li>
@@ -65,40 +62,40 @@ const Footer = () => {
                         </li>
                     </ul>
                 </FooterMenu>
-            </FooterLink>
+                </FooterLeft>
             </FooterContent>
             <hr/>
-            <SocialIconWrapper>
-            <CopyRight>
-                © Copyright 2022 DispatchNg. All Right Reserved.
-            </CopyRight>
-
-            <FooterForm>
-            <input
-                  id="q"
-                  aria-label="Chat"
-                  placeholder="Chat with us here"
-                  type="text"
-                  name="q"
-                />
-                <img src={Hand} alt='emoji' />
-                <span>
-                    <a href="https://wa.me/+23408133649624" target="_blank" rel="noopener noreferrer"><MdMessage size="25"/></a>
-                </span>
+            <FooterBelow>
+                <CopyRight>
+                    © Copyright 2022 DispatchNg. All Right Reserved.
+                </CopyRight>
+                <SocialIconWrapper>
+                <FooterForm>
+                    <input
+                    id="q"
+                    aria-label="Chat"
+                    placeholder="Chat with us here"
+                    type="text"
+                    name="q"
+                    />
+                    <img src={Hand} alt='emoji' />
+                    <span>
+                        <a href="https://wa.me/+23408133649624" target="_blank" rel="noopener noreferrer"><MdMessage size="35"/></a>
+                    </span>
             </FooterForm>
-
             <SocialIcon>
-                <a href="#hghgh" target="_blank" rel="noopener noreferrer">
-                    <FaInstagram size="22" />
+                <a href="#ytyt" target="_blank">
+                    <FaInstagram size="32" />
                     </a>
-                <a href="#hghghgh" target="_blank" rel="noopener noreferrer">
-                    <BsTwitter  size="22" />
+                <a href="#ytyt" target="_blank">
+                    <BsTwitter  size="32" />
                     </a>
-                <a href="#hghghghh" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin size="22" />
+                <a href="#ytut" target="_blank">
+                    <FaLinkedin size="32" />
                 </a>
             </SocialIcon>
-            </SocialIconWrapper>
+                </SocialIconWrapper>
+            </FooterBelow>
         </FooterContainer>
     </FooterWrapper>
   )
