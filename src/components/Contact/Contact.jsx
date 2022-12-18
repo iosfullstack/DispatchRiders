@@ -8,16 +8,23 @@ const Contact = () => {
     const [email, setEmail] = useState()
 
     const sendEmail = async (e) => {
-        const config = {
-            headers: {
-                "Content-Type": "text/json"
-            }
-        }
+        const url = 'https://dispatchng.herokuapp.com/email';
         e.preventDefault()
 
-        await axios.post('https://dispatchng.herokuapp.com/email', {email}, config)
+        await axios(url, {
+            method: 'post',
+            mode: 'no-cors',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+            },
+            withCredentials: true,
+            credentials: true,
+            crossdomain: true,
+            email,
+        })
         .then(response => {
-            console.log(response.json)
+            console.log(response.json())
         })
     }
   return (
