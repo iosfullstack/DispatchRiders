@@ -5,39 +5,31 @@ import Img2 from "../../assets/images/contacts/img2.png"
 import { useState } from 'react'
 
 const Contact = () => {
-    const [email, setEmail] = useState()
+    const [email, setEmail] = useState('')
     // const [message, setMessage] = useState(false)
     // const [errors, setErrors] = useState(false)
-
-    const sendEmail = async  (e) => {
-        const url = 'https://dispatchng.herokuapp.com/email';
-        e.preventDefault()
+    const url = `https://dispatchng.herokuapp.com/email`;
+    const sendEmail = async (e) => {
+        const data = {email: email};
+        e.preventDefault();
         setEmail('')
         await fetch(url, {
             method: 'POST',
-            mode: 'no-cors',
             headers: {
-                'Access-Control-Allow-Origin': '*',
-                "Content-Type": "application/json;",
-                'Accept': 'application/json, text/plain, */*',
-                credentials: "omit", //
-            },
-            withCredentials: true,
-            // credentials: 'same-origin',
-            redirect: 'follow',
-            referrerPolicy: 'no-referrer',
-            cache: 'no-cache',
-            crossdomain: true,
-            // email,
+        "Content-Type" : "application/json",
+        "accept" : "application/json"},
+            mode: 'no-cors',
+            body: JSON.stringify(data),
         })
-        .then((response) => response.data)
-        .then((email) => {
-            console.log('Success:', email)
+        .then((res) => res.json())
+        .then((data) => {
+            // setEmail('')
+            console.log('Success:', data)
         })
         .catch((error) => {
             console.error('Error:', error)
         })
-    }
+    };
   return (
     <ContactWrapper id='contacts'>
        <ContactContainer>
@@ -54,7 +46,7 @@ const Contact = () => {
                 </ContactText>
 
                 <FormWrapper>
-                    <form action="" method='post' onSubmit={sendEmail}>
+                    <form action="" onSubmit={sendEmail}>
                         <EmailInput value={email} onChange={e => setEmail(e.target.value)} type="email" name="email" id="" placeholder='Enter your Email' />
                         <EmailButton type="submit" name="Submit"/>
                     </form>
