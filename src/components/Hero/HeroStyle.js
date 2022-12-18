@@ -107,6 +107,18 @@ export const HeroImages = styled.div`
         @media (min-width: 768px) {
             width: 50%;
         }
+        @media (min-width: 765px) {
+            width: 50%;
+        }
+        @media (min-width: 760px) {
+            width: 50%;
+        }
+        @media (min-width: 755px) {
+            width: 50%;
+        }
+        @media (min-width: 723px) {
+            width: 50%;
+        }
         @media (min-width: 1024px) {
             width: 50%;
         }

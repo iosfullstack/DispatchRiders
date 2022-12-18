@@ -97,6 +97,10 @@ export const EmailButton = styled.input`
     right: 22%;
     top: 6%;
     cursor: pointer;
+    @media only screen and (max-width : 1600px) {
+  /* Styles */
+    right: 25%;
+}
     @media only screen and (max-width : 1440px) {
   /* Styles */
     right: 14%;

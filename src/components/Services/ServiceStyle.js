@@ -4,11 +4,12 @@ export const ServiceWrapper = styled.div`
     width: 100%;
     position: relative;
     overflow: hidden;
+    background: #fff;
     margin-bottom: 50px;
 `
 export const ServiceContainer = styled.div`
     position: relative;
-    margin: auto;
+    margin-top: 70px;
     padding: 0px 24px;
     @media (max-width: 580px) {
         padding: 0px;
@@ -97,7 +98,8 @@ export const TypographyP = styled.p`
     font-weight: 800;
     text-align: center;
 
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
         font-size: 14px;
+        font-weight: 300;
     }
 `
