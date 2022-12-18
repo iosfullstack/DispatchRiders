@@ -1,30 +1,41 @@
 import React from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 import { ContactContainer, ContactDetails, ContactImage, ContactText, ContactWrapper, DetailsWrapper, EmailButton, EmailInput, FormWrapper, TypographyH, TypographyP } from './ContactStyle'
 import Img2 from "../../assets/images/contacts/img2.png"
 import { useState } from 'react'
 
 const Contact = () => {
     const [email, setEmail] = useState()
+    // const [message, setMessage] = useState(false)
+    // const [errors, setErrors] = useState(false)
 
-    const sendEmail = async (e) => {
+    const sendEmail = async  (e) => {
         const url = 'https://dispatchng.herokuapp.com/email';
         e.preventDefault()
-
-        await axios(url, {
-            method: 'post',
+        setEmail('')
+        await fetch(url, {
+            method: 'POST',
             mode: 'no-cors',
             headers: {
                 'Access-Control-Allow-Origin': '*',
-                "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+                "Content-Type": "application/json;",
+                'Accept': 'application/json, text/plain, */*',
+                credentials: "omit", //
             },
             withCredentials: true,
-            credentials: true,
+            // credentials: 'same-origin',
+            redirect: 'follow',
+            referrerPolicy: 'no-referrer',
+            cache: 'no-cache',
             crossdomain: true,
-            email,
+            // email,
         })
-        .then(response => {
-            console.log(response.json())
+        .then((response) => response.data)
+        .then((email) => {
+            console.log('Success:', email)
+        })
+        .catch((error) => {
+            console.error('Error:', error)
         })
     }
   return (
